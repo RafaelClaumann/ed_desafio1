@@ -1,2 +1,2 @@
-gcc teste.c requisicao.c -o output && ./output
+gcc ./src/teste.c ./src/requisicao.c -o output && ./output
 rm -r output

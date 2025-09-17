@@ -31,7 +31,7 @@ char *get_nome(Requisicao *req) {
 }
 
 int get_inscricao(Requisicao *req) {
-  if (!req) return NULL;
+  if (!req) return -1;
   return req->codigo_inscricao;
 }
 
