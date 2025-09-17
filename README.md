@@ -1,4 +1,6 @@
-Uma organização está construindo uma aplicação que recebe milhares de requisições para atendimento de saúde. Essas requisições possuem as seguintes informações:
+Uma organização está construindo uma aplicação que recebe milhares de requisições para atendimento de saúde.
+
+Essas requisições possuem as seguintes informações:
 
 - `Nome do Paciente` – uma string de 40 caracteres
 - `Código de inscrição que o identifica no sistema de saúde` – um número de tipo inteiro
