@@ -12,7 +12,7 @@ typedef struct {
 
 Requisicao *cria_requisicao(char *nome, int codigo_inscricao, char *codigo_procedimento);
 
-void destroi_requisicao(Requisicao *r);
+void libera(Requisicao *r);
 
 char *get_nome(Requisicao *req);
 

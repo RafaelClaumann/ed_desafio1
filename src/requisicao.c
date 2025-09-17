@@ -21,7 +21,7 @@ Requisicao *cria_requisicao(char *nome_, int inscricao_, char *procedimento_) {
   return r;
 }
 
-void destroi_requisicao(Requisicao *r) {
+void libera(Requisicao *r) {
   free(r);
 }
 

@@ -11,6 +11,6 @@ int main() {
   printf("Inscrição: %i\n", get_inscricao(r));
   printf("Procedimento: %s\n", get_procedimento(r));
 
-  destroi_requisicao(r);
+  libera(r);
   return EXIT_SUCCESS;
 }
