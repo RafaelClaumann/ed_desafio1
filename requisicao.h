@@ -16,7 +16,7 @@ void destroi_requisicao(Requisicao *r);
 
 char *get_nome(Requisicao *req);
 
-int *get_inscricao(Requisicao *req);
+int get_inscricao(Requisicao *req);
 
 char *get_procedimento(Requisicao *req);
 
