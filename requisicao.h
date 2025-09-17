@@ -9,4 +9,8 @@ typedef struct {
 
 char *get_nome(Requisicao *req);
 
+int *get_inscricao(Requisicao *req);
+
+char *get_procedimento(Requisicao *req);
+
 #endif
