@@ -3,8 +3,15 @@
 #ifndef ESTRUTURA_H
 #define ESTRUTURA_H
 
-typedef struct {
-  int codigo_inscricao;
+typedef struct Node_t {
+  Requisicao *requisicao;
+  struct Node_t *next;
+} NODE;
+
+typedef struct Estrutura_t {
+  NODE *head;
+  NODE *tail;
+  int size;
 } Estrutura;
 
 Estrutura *create();
