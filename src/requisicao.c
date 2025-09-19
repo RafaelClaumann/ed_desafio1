@@ -15,14 +15,11 @@ Requisicao *cria_requisicao(char *nome_, int inscricao_, char *procedimento_) {
 
   r->codigo_inscricao = inscricao_;
 
-  strncpy(r->codigo_procedimento, procedimento_,
-          sizeof(r->codigo_procedimento) - 1);
+  strncpy(r->codigo_procedimento, procedimento_, sizeof(r->codigo_procedimento) - 1);
   r->codigo_procedimento[sizeof(r->codigo_procedimento) - 1] = '\0';
 
   return r;
 }
-
-void libera(Requisicao *r) { free(r); }
 
 char *get_nome(Requisicao *req) {
   if (!req)
@@ -41,3 +38,5 @@ char *get_procedimento(Requisicao *req) {
     return NULL;
   return req->codigo_procedimento;
 }
+
+void libera(Requisicao *r) { free(r); }

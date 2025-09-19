@@ -19,14 +19,14 @@ Estrutura *create() {
 }
 
 // Função para inserir uma requisição na fila
-void inserir(Estrutura *queue, Requisicao *requisicao) {
+void inserir(Estrutura *queue, Requisicao *requisicao_) {
   // Aloca memória para um novo nó
   NODE *temp = (NODE *)malloc(sizeof(NODE));
   if (temp == NULL)
     return; // Sai se falhar a alocação
 
   // Configura o novo nó
-  temp->requisicao = requisicao; // Armazena a requisição
+  temp->requisicao = requisicao_; // Armazena a requisição
   temp->next = NULL;             // Próximo nó é NULL (será o último)
 
   // Se a fila está vazia

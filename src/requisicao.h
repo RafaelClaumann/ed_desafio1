@@ -10,15 +10,14 @@ typedef struct {
   char codigo_procedimento[REQ_TAMANHO_PROCEDIMENTO];
 } Requisicao;
 
-Requisicao *cria_requisicao(char *nome, int codigo_inscricao,
-                            char *codigo_procedimento);
-
-void libera(Requisicao *r);
+Requisicao *cria_requisicao(char *nome, int codigo_inscricao, char *codigo_procedimento);
 
 char *get_nome(Requisicao *req);
 
 int get_inscricao(Requisicao *req);
 
 char *get_procedimento(Requisicao *req);
+
+void libera(Requisicao *r);
 
 #endif
