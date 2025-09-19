@@ -5,12 +5,13 @@
 #define REQ_TAMANHO_PROCEDIMENTO 10
 
 typedef struct {
-    char nome[REQ_TAMANHO_NOME];
-    int codigo_inscricao;
-    char codigo_procedimento[REQ_TAMANHO_PROCEDIMENTO];
+  char nome[REQ_TAMANHO_NOME];
+  int codigo_inscricao;
+  char codigo_procedimento[REQ_TAMANHO_PROCEDIMENTO];
 } Requisicao;
 
-Requisicao *cria_requisicao(char *nome, int codigo_inscricao, char *codigo_procedimento);
+Requisicao *cria_requisicao(char *nome, int codigo_inscricao,
+                            char *codigo_procedimento);
 
 void libera(Requisicao *r);
 
