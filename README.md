@@ -21,3 +21,65 @@ A estrutura da requisição é fornecida pelos arquivos:
 - requisicao.c
 
 Para seus testes de validação de sua implementação, está sendo fornecido um exemplo de código com uma função main, que pode ser usada para verificar seu funcionamento: `teste.c`
+
+
+### Fluxo da Fila
+
+``` C
+typedef struct {
+    char nome[REQ_TAMANHO_NOME];
+    int codigo_inscricao;
+    char codigo_procedimento[REQ_TAMANHO_PROCEDIMENTO];
+} Requisicao;
+
+typedef struct Node_t {
+  Requisicao *requisicao;
+  struct Node_t *next;
+} NODE;
+
+typedef struct Estrutura_t {
+  NODE *head;
+  NODE *tail;
+  int size;
+} Estrutura;
+```
+
+#### Fila Vazia
+- Head: NULL
+- Tail: NULL
+- Size: 0
+
+#### Após inserir Joao
+- Head: Joao
+- Tail: Joao
+- Size: 1
+- [Joao] -> NULL
+
+#### Após inserir Maria
+- Head: Joao
+- Tail: Maria
+- Size: 2
+- [Joao] -> [Maria] -> NULL
+
+#### Após inserir Pedro
+- Head: Joao
+- Tail: Pedro
+- Size: 3
+- [Joao] -> [Maria] -> [Pedro] -> NULL
+
+#### Após remover Joao
+- Head: Maria
+- Tail: Pedro
+- Size: 2
+- [Maria] -> [Pedro] -> NULL
+
+#### Após remover Maria
+- Head: Pedro
+- Tail: Pedro
+- Size: 1
+- [Pedro] -> NULL
+
+#### Após remover Pedro
+- Head: NULL
+- Tail: NULL
+- Size: 0
