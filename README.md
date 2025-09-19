@@ -44,42 +44,77 @@ typedef struct Estrutura_t {
 } Estrutura;
 ```
 
-#### Fila Vazia
-- Head: NULL
-- Tail: NULL
-- Size: 0
+``` txt
+### Fila Vazia
+┌──────────────────────────────────┐
+│            FILA VAZIA            │
+├──────────────────────────────────┤
+│ Head: NULL                       │
+│ Tail: NULL                       │  
+│ Size: 0                          │
+└──────────────────────────────────┘
 
-#### Após inserir Joao
-- Head: Joao
-- Tail: Joao
-- Size: 1
-- [Joao] -> NULL
+### Após inserir Joao
+┌──────────────────────────────────┐
+│            FILA                  │
+├──────────────────────────────────┤
+│ Head: Joao                       │
+│ Tail: Joao                       │
+│ Size: 1                          │
+├──────────────────────────────────┤
+│ [Joao] → NULL                    │
+└──────────────────────────────────┘
 
-#### Após inserir Maria
-- Head: Joao
-- Tail: Maria
-- Size: 2
-- [Joao] -> [Maria] -> NULL
+### Após inserir Maria
+┌──────────────────────────────────┐
+│            FILA                  │
+├──────────────────────────────────┤
+│ Head: Joao                       │
+│ Tail: Maria                      │
+│ Size: 2                          │
+├──────────────────────────────────┤
+│ [Joao] → [Maria] → NULL          │
+└──────────────────────────────────┘
 
-#### Após inserir Pedro
-- Head: Joao
-- Tail: Pedro
-- Size: 3
-- [Joao] -> [Maria] -> [Pedro] -> NULL
+### Após inserir Pedro
+┌──────────────────────────────────┐
+│            FILA                  │
+├──────────────────────────────────┤
+│ Head: Joao                       │
+│ Tail: Pedro                      │
+│ Size: 3                          │
+├──────────────────────────────────┤
+│ [Joao] → [Maria] → [Pedro] → NULL│
+└──────────────────────────────────┘
 
-#### Após remover Joao
-- Head: Maria
-- Tail: Pedro
-- Size: 2
-- [Maria] -> [Pedro] -> NULL
+### Após remover Joao
+┌─────────────────────────────────┐
+│            FILA                 │
+├─────────────────────────────────┤
+│ Head: Maria                     │
+│ Tail: Pedro                     │
+│ Size: 2                         │
+├─────────────────────────────────┤
+│ [Maria] → [Pedro] → NULL        │
+└─────────────────────────────────┘
 
-#### Após remover Maria
-- Head: Pedro
-- Tail: Pedro
-- Size: 1
-- [Pedro] -> NULL
+### Após remover Maria
+┌─────────────────────────────────┐
+│            FILA                 │
+├─────────────────────────────────┤
+│ Head: Joao                      │
+│ Tail: NULL                      │
+│ Size: 1                         │
+├─────────────────────────────────┤
+│ [Pedro] → NULL                  │
+└─────────────────────────────────┘
 
-#### Após remover Pedro
-- Head: NULL
-- Tail: NULL
-- Size: 0
+### Após remover Pedro
+┌─────────────────────────────────┐
+│            FILA                 │
+├─────────────────────────────────┤
+│ Head: NULL                      │
+│ Tail: NULL                      │  
+│ Size: 0                         │
+└─────────────────────────────────┘
+```
