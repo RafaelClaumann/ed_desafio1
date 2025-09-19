@@ -1,5 +1,5 @@
-#include "estrutura.h"
-#include "requisicao.h"
+#include "../src/estrutura.h"
+#include "../src/requisicao.h"
 #include <stdio.h>
 #include <string.h>
 
