@@ -28,6 +28,9 @@ Para seus testes de validação de sua implementação, está sendo fornecido um
 ### Como executar o projeto
 
 ```shell
+# Clonar o projeto
+git clone https://github.com/RafaelClaumann/ed_desafio1.git
+
 # Navegue até o diretório do projeto
 cd ed_desafio1
 
