@@ -1,3 +1,6 @@
+## Estruturas de Dados
+
+### Contexto do Desafio
 Uma organização está construindo uma aplicação que recebe milhares de requisições para atendimento de saúde.
 
 Essas requisições possuem as seguintes informações:
