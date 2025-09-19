@@ -59,7 +59,7 @@ typedef struct {
 } Requisicao;
 ```
 
-<img width="937" height="509" alt="image" src="https://github.com/user-attachments/assets/9b848053-8f07-4bf9-b8d7-a00dfa7a39bc" />
+<img width="958" height="509" alt="image" src="https://github.com/user-attachments/assets/ff92ffaa-924c-4425-8311-344e098bed81" />
 
 ### Fluxo da Fila
 
