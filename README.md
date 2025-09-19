@@ -39,8 +39,7 @@ sh compile.sh
 
 ```
 
-### Fluxo da Fila
-
+### Estrutura da Fila
 ``` C
 typedef struct {
     char nome[REQ_TAMANHO_NOME];
@@ -59,6 +58,12 @@ typedef struct Estrutura_t {
   int size;
 } Estrutura;
 ```
+
+<img width="1128" height="617" alt="image" src="https://github.com/user-attachments/assets/86021daf-38c4-4ab6-94ed-8811c9f38c6d" />
+
+
+
+### Fluxo da Fila
 
 ``` txt
 ### Fila Vazia
