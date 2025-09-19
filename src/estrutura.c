@@ -54,4 +54,20 @@ Requisicao *remover(Estrutura *queue) {
 
 int get_size(Estrutura *estrutura) { return estrutura->size; }
 
-void libera_estrutura(Estrutura *r) { free(r); }
+void libera_estrutura(Estrutura *r) {
+  if (r == NULL) return;
+
+  NODE *temp = r->head;
+  while (temp != NULL) {
+    NODE *prox = temp->next;
+
+    if (temp->requisicao != NULL) {
+      free(temp->requisicao);
+    }
+    free(temp);
+
+    temp = prox;
+  }
+
+  free(r);
+}
