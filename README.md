@@ -40,6 +40,8 @@ sh compile.sh
 ```
 
 ### Estrutura da Fila
+
+Estruturas implementadas em código C para criação da pilha com listas.
 ``` C
 typedef struct Estrutura_t {
   NODE *head;
@@ -58,6 +60,13 @@ typedef struct {
     char codigo_procedimento[REQ_TAMANHO_PROCEDIMENTO];
 } Requisicao;
 ```
+
+Exemplo de `fila` com tres elementos, veja os detalhes:
+- `Estrutura->head` tem o endereço do primeiro elemento da fila, isto é, `&A`
+- `Estrutura->tail` tem o endereço do último elmento da fila, isto é, `&C`
+- `Estrutura->size` reflete a quantidade de elementos na fila
+- `NodeA->next` é `NodeB`, `NodeB->next` é `NodeC` e `NodeC->next` é `NULL`
+- `NodeC->next` é `NULL` porque ele é o último elemento na fila
 
 <img width="958" height="509" alt="image" src="https://github.com/user-attachments/assets/ff92ffaa-924c-4425-8311-344e098bed81" />
 
