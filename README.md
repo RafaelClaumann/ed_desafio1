@@ -41,22 +41,22 @@ sh compile.sh
 
 ### Estrutura da Fila
 ``` C
-typedef struct {
-    char nome[REQ_TAMANHO_NOME];
-    int codigo_inscricao;
-    char codigo_procedimento[REQ_TAMANHO_PROCEDIMENTO];
-} Requisicao;
+typedef struct Estrutura_t {
+  NODE *head;
+  NODE *tail;
+  int size;
+} Estrutura;
 
 typedef struct Node_t {
   Requisicao *requisicao;
   struct Node_t *next;
 } NODE;
 
-typedef struct Estrutura_t {
-  NODE *head;
-  NODE *tail;
-  int size;
-} Estrutura;
+typedef struct {
+    char nome[REQ_TAMANHO_NOME];
+    int codigo_inscricao;
+    char codigo_procedimento[REQ_TAMANHO_PROCEDIMENTO];
+} Requisicao;
 ```
 
 <img width="937" height="509" alt="image" src="https://github.com/user-attachments/assets/9b848053-8f07-4bf9-b8d7-a00dfa7a39bc" />
