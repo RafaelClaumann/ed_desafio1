@@ -59,8 +59,7 @@ typedef struct Estrutura_t {
 } Estrutura;
 ```
 
-<img width="1128" height="617" alt="image" src="https://github.com/user-attachments/assets/f88c109b-3a14-46c8-92c1-7762b63fca03" />
-
+<img width="937" height="509" alt="image" src="https://github.com/user-attachments/assets/9b848053-8f07-4bf9-b8d7-a00dfa7a39bc" />
 
 ### Fluxo da Fila
 
