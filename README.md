@@ -22,6 +22,16 @@ A estrutura da requisição é fornecida pelos arquivos:
 
 Para seus testes de validação de sua implementação, está sendo fornecido um exemplo de código com uma função main, que pode ser usada para verificar seu funcionamento: `teste.c`
 
+### Como executar o projeto
+
+```shell
+# Navegue até o diretório do projeto
+cd ed_desafio1
+
+# Compilar e executar o projeto com o script compile.sh
+sh compile.sh
+
+```
 
 ### Fluxo da Fila
 
