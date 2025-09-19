@@ -68,6 +68,11 @@ Exemplo de `fila` com tres elementos, veja os detalhes:
 - `NodeA->next` é `NodeB`, `NodeB->next` é `NodeC` e `NodeC->next` é `NULL`
 - `NodeC->next` é `NULL` porque ele é o último elemento na fila
 
+O que acontece se `NodeA` for removido?
+- `Estrutura->head` terá o endereço `&B`
+- `Estrutura->size` será decrementado
+- `NodeC->requisicao` será retornado para o cliente antes de ser desalocado com `free()`
+
 <img width="958" height="509" alt="image" src="https://github.com/user-attachments/assets/ff92ffaa-924c-4425-8311-344e098bed81" />
 
 ### Fluxo da Fila
