@@ -121,13 +121,13 @@ void test_remover_vazio() {
 
 void test_inserir_dados_grandes() {
   Estrutura *q = create();
-  char nome[REQ_TAMANHO_NOME + 10];
+  char nome[40 + 10];
   memset(nome, 'A', sizeof(nome));
-  nome[REQ_TAMANHO_NOME - 1] = '\0';
+  nome[40 - 1] = '\0';
 
-  char proc[REQ_TAMANHO_PROCEDIMENTO + 5];
+  char proc[10 + 5];
   memset(proc, 'B', sizeof(proc));
-  proc[REQ_TAMANHO_PROCEDIMENTO - 1] = '\0';
+  proc[10 - 1] = '\0';
 
   Requisicao *r = make_req(nome, 12345, proc);
   inserir(q, r);

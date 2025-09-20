@@ -2,6 +2,15 @@
 #include <stdlib.h>
 #include <string.h>
 
+#define REQ_TAMANHO_NOME 40
+#define REQ_TAMANHO_PROCEDIMENTO 10
+
+struct Requisicao {
+  char nome[REQ_TAMANHO_NOME];
+  int codigo_inscricao;
+  char codigo_procedimento[REQ_TAMANHO_PROCEDIMENTO];
+};
+
 Requisicao *cria_requisicao(char *nome_, int inscricao_, char *procedimento_) {
   if (!nome_ || !procedimento_)
     return NULL;
