@@ -1,7 +1,7 @@
-#include "requisicao.h"
-
 #ifndef ESTRUTURA_H
 #define ESTRUTURA_H
+
+#include "requisicao.h"
 
 typedef struct Node_t {
   Requisicao *requisicao;
