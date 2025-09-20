@@ -144,6 +144,21 @@ void test_inserir_dados_grandes() {
   libera_estrutura(q);
 }
 
+void test_encapsulamento() {
+    Estrutura *q = create();
+
+    // Nota: Estrutura é opaca, campos internos (head, tail, size) **não acessíveis**.
+    // Se você tentar acessar q->head, q->tail ou q->size, o compilador dará erro.
+    // Portanto, encapsulamento é garantido pelo compilador.
+
+    if (get_size(q) == 0) {
+        printf("✔ test_encapsulamento_documentacao: uso apenas via API\n");
+    }
+
+    libera_estrutura(q);
+}
+
+
 // ---------- Main ----------
 int main() {
   test_criar_e_liberar_vazia();
@@ -154,6 +169,7 @@ int main() {
   test_remover_null();
   test_remover_vazio();
   test_inserir_dados_grandes();
+  test_encapsulamento(); 
 
   printf("\nTodos os testes executados.\n");
   return 0;

@@ -3,16 +3,7 @@
 
 #include "requisicao.h"
 
-typedef struct Node_t {
-  Requisicao *requisicao;
-  struct Node_t *next;
-} NODE;
-
-typedef struct Estrutura_t {
-  NODE *head;
-  NODE *tail;
-  int size;
-} Estrutura;
+typedef struct Estrutura Estrutura;
 
 Estrutura *create();
 

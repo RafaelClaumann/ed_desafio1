@@ -2,6 +2,17 @@
 #include "requisicao.h"
 #include <stdlib.h>
 
+typedef struct Node_t {
+  Requisicao *requisicao;
+  struct Node_t *next;
+} NODE;
+
+struct Estrutura {
+    NODE *head;
+    NODE *tail;
+    int size;
+};
+
 // Função para criar uma nova estrutura (fila)
 // Aloca memória para a estrutura e inicializa seus campos
 Estrutura *create() {
@@ -56,9 +67,8 @@ Requisicao *remover(Estrutura *queue) {
   queue->head = old_head->next;
 
   // Se a fila ficou vazia após a remoção
-  if (queue->head == NULL) {
+  if (queue->head == NULL)
     queue->tail = NULL; // Atualiza tail também para NULL
-  }
 
   queue->size--; // Decrementa o contador de elementos
 
@@ -80,9 +90,9 @@ void libera_estrutura(Estrutura *r) {
     NODE *prox = temp->next; // Guarda referência para o próximo nó
 
     // Libera a memória da requisição (se existir)
-    if (temp->requisicao != NULL) {
+    if (temp->requisicao != NULL)
       free(temp->requisicao);
-    }
+
     free(temp); // Libera o nó atual
 
     temp = prox; // Avança para o próximo nó
