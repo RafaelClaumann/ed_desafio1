@@ -8,6 +8,7 @@ struct Requisicao {
 
 Requisicao *cria_requisicao(char *nome_, int inscricao_, char *procedimento_) {
     ...
+    // strncpy(destino, fonte, size);
     strncpy(r->nome, nome_, sizeof(r->nome) - 1);
     r->nome[sizeof(r->nome) - 1] = '\0';
     ...
