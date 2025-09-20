@@ -13,90 +13,74 @@ struct Estrutura {
     int size;
 };
 
-// Função para criar uma nova estrutura (fila)
-// Aloca memória para a estrutura e inicializa seus campos
 Estrutura *create() {
-  // Aloca memória para a estrutura da fila
   Estrutura *queue = (Estrutura *)malloc(sizeof(Estrutura));
   if (queue == NULL)
-    return NULL; // Retorna NULL se falhar a alocação
+    return NULL;
 
-  // Inicializa os ponteiros da fila (vazia)
-  queue->head = NULL; // Primeiro elemento da fila
-  queue->tail = NULL; // Último elemento da fila
-  queue->size = 0;    // Contador de elementos
+  queue->head = NULL;
+  queue->tail = NULL;
+  queue->size = 0;
 
-  return queue; // Retorna a fila criada
+  return queue;
 }
 
-// Função para inserir uma requisição na fila
 void inserir(Estrutura *queue, Requisicao *requisicao_) {
-  // Aloca memória para um novo nó
   NODE *temp = (NODE *)malloc(sizeof(NODE));
   if (temp == NULL)
-    return; // Sai se falhar a alocação
+    return;
 
-  // Configura o novo nó
-  temp->requisicao = requisicao_; // Armazena a requisição
-  temp->next = NULL;             // Próximo nó é NULL (será o último)
+  temp->requisicao = requisicao_;
+  temp->next = NULL;
 
-  // Se a fila está vazia
   if (queue->head == NULL) {
-    queue->head = temp; // Novo nó é o primeiro (head)
-    queue->tail = temp; // Novo nó também é o último (tail)
+    queue->head = temp;
+    queue->tail = temp;
   } else {
-    // Se a fila não está vazia
-    queue->tail->next = temp; // O último nó atual (tail) aponta para o novo
-    queue->tail = temp;       // Novo nó se torna o último (tail)
+    queue->tail->next = temp;
+    queue->tail = temp;
   }
 
-  queue->size++; // Incrementa o contador de elementos
+  queue->size++;
 }
 
-// Função para remover e retornar a primeira requisição da fila
 Requisicao *remover(Estrutura *queue) {
-  // Verifica se a fila existe ou está vazia
   if (queue == NULL || queue->head == NULL)
     return NULL;
 
-  // Guarda referência para o nó que será removido (primeiro)
   NODE *old_head = queue->head;
-  Requisicao *req = old_head->requisicao; // Salva a requisição
+  Requisicao *req = old_head->requisicao;
 
-  // Atualiza o head para o próximo nó
   queue->head = old_head->next;
 
-  // Se a fila ficou vazia após a remoção
   if (queue->head == NULL)
-    queue->tail = NULL; // Atualiza tail também para NULL
+    queue->tail = NULL;
 
-  queue->size--; // Decrementa o contador de elementos
+  queue->size--;
 
-  free(old_head); // Libera a memória do nó removido
-  return req;     // Retorna a requisição removida
+  free(old_head);
+  return req;
 }
 
-// Função que retorna o tamanho atual da fila
-int get_size(Estrutura *estrutura) { return estrutura->size; }
+int get_size(Estrutura *queue) {
+  return queue->size;
+}
 
-// Função para liberar toda a memória alocada pela estrutura
-void libera_estrutura(Estrutura *r) {
-  if (r == NULL)
+void libera_estrutura(Estrutura *queue) {
+  if (queue == NULL)
     return;
 
-  // Percorre todos os nós da fila liberando a memória
-  NODE *temp = r->head;
+  NODE *temp = queue->head;
   while (temp != NULL) {
-    NODE *prox = temp->next; // Guarda referência para o próximo nó
+    NODE *prox = temp->next;
 
-    // Libera a memória da requisição (se existir)
     if (temp->requisicao != NULL)
       free(temp->requisicao);
 
-    free(temp); // Libera o nó atual
+    free(temp);
 
-    temp = prox; // Avança para o próximo nó
+    temp = prox;
   }
 
-  free(r); // Libera a estrutura principal
+  free(queue);
 }

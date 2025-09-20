@@ -48,4 +48,6 @@ char *get_procedimento(Requisicao *req) {
   return req->codigo_procedimento;
 }
 
-void libera(Requisicao *r) { free(r); }
+void libera(Requisicao *r) {
+  free(r);
+}
